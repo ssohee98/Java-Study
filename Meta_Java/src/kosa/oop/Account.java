@@ -22,9 +22,9 @@ public class Account {
 		balance += amount;
 	}
 	
-	public int withdraw(int amount) {		//얼마를 출금했는지 리턴
+	public int withdraw(int amount) throws Exception{		//얼마를 출금했는지 리턴
 		if (balance < amount) {					//출금 조건 (잔액보다 요청액이 많으면 거부)
-			return 0;
+			throw new Exception("잔액 부족");
 		}
 		balance -= amount;						//조건 만족하면 잔액 변경되고 출금액 리턴
 		
