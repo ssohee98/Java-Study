@@ -11,31 +11,31 @@ public class Item {
 	Scanner sc =new Scanner(System.in);
 
 	private String itemName;
-	private String itemPrice;
-	private List<Order> orders;		//고객 정보를 order 리스트에 저장
-	int count;
+	private int itemPrice;
+//	private List<Order> orders;		//고객 정보를 order 리스트에 저장
+//	int count;
 	
 	public Item() {}
 
-	public Item(String itemName, String itemPrice) {
+	public Item(String itemName, int itemPrice) {
 		super();
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
-		orders = new ArrayList<Order>(); 
+//		orders = new ArrayList<Order>(); 
 	}
 	
-	public void register(Order order) {		// 주문정보 + 회원정보 전달
-		orders.add(order);
-		order.addItem(this); 		//객체 자신의 내용
-	}
-	
-	public void printItem() {		//회원 확인
-		System.out.println("주문한 상품 모델명 : "+itemName);
-		for(Order order : orders ) {	
-			System.out.println("주문한 상품 가격 : "+itemPrice);
-		}
-		System.out.println();
-	}
+//	public void register(Order order) {		// 주문정보 + 회원정보 전달
+//		orders.add(order);
+//		order.addItem(this); 		//객체 자신의 내용
+//	}
+//	
+//	public void printItem() {		//회원 확인
+//		System.out.println("주문한 상품 모델명 : "+itemName);
+//		for(Order order : orders ) {	
+//			System.out.println("주문한 상품 가격 : "+itemPrice);
+//		}
+//		System.out.println();
+//	}
 
 	public String getItemName() {
 		return itemName;
@@ -45,11 +45,11 @@ public class Item {
 		this.itemName = itemName;
 	}
 
-	public String getItemPrice() {
+	public int getItemPrice() {
 		return itemPrice;
 	}
 
-	public void setItemPrice(String itemPrice) {
+	public void setItemPrice(int itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 }

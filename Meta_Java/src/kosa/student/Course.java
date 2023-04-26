@@ -22,6 +22,7 @@ public class Course {
 		students.add(student);
 	}
 	
+
 	public void removeStudent(Student student) {
 		students.remove(student);
 	}
